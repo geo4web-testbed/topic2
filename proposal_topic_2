@@ -1,0 +1,84 @@
+Spotzi already deployed a local copy of OpenstreetMap (OSM). The OSM data is used for the following services:
+
+-	A worldwide Basemap used by clients (www.spotzi.com).
+-	A POI extraction which is offered as a separate layer to clients.
+-	An intelligent geocoder based on OSM data.
+Currently Spotzi offers other (open) datasets as a separate layer instead of an integration into OSM. 
+We have chosen to apply for this particular research topic, because the product Spotzi already build matches the goal of Geonovum to deliver data instead of plain WMS and other image servers. 
+As the product we build is based on Open Source software Spotzi is willing to share its knowledge with the public domain. 
+Geonovum is the perfect platform for Spotzi to achieve this.
+
+However more importantly we find the approach of integrating more data into OSM interesting. Spotzi has chosen to use Open Source Software and Open Data to build the current platform: a datashop and data visualization platform. The goal of Spotzi is the same as the goal stated in this research topic: let the community add data but in a controlled matter. Spotzi promotes to share as much data as possible. Spotzi is offering a free account to parties who are willing to share their data.
+
+Currently we have chosen to review the uploaded data by our members and only accept new dataset and no updates. Geonovum’s proposal of using a two-tier tagging system is an interesting one as this addresses the issue of how to handle updates on existing datasets without the datesets being affected.
+
+Secondly Geonovum’s approach of using Openstreetmap as a “platform” attracted our attention as Spotzi was thinking of methods how to return data into the community instead of keeping it within the Spotzi platform. Secondary to the Geonovum study Spotzi will explore the possibility whether the Openstreetmap platform can be used as a data exchange platform.
+
+During this research we will investigate whether an ideal situation can be created where data is actually stored in the OSM community database. The working demo will only show a local OSM database with the functionalities as described in this document.
+
+3.	Plan of approach
+
+Task 1
+In task one Geonovum addresses the issue of updating the data. The user management describes authoritative accounts and citizen/user accounts.
+
+To address this, a two layer system needs to be set up around each dataset. The first layer is the main layer of data which can be edited by the one authorized. The second layer is a datalayer on top of the main layer where the community can edit or propose changes. This community layer can be turned on or off.
+
+Spotzi currently supports the combination of using OSM as a basemap and secondary layers which can be edited. The current system uses the Open Source components of PostgreSQL and PostGIS so enclosing this solution to Geonovum is no problem.
+
+As part of task one Spotzi will investigate how to add the required data as described in the research topic (like BAG and BGT) as an intermediate layer or as an embedded layer into OSM. The BAG can be an embedded layer into OSM as this will add features to the data which will not overlap other features. The features of the land cover and BGT data however will overlap current OSM data like roads and buildings. Also the BAG data needs to be visible as a layer which can be edited. Therefore Spotzi will design a system where data will be stored in the OSM database but on the other hand can be made visible as an extra layer. On top of this layer an extra community layer will be added (see figure below). The current idea is to store this data in a separate database however we propose a system where features of the main layer can be selected and then be transferred into that separate database. This will guarantee that the original feature information is available to the owner so the owner can instantly trace what features are proposed to be changed.
+
+Regarding the download function. Again we propose a tool where features can be selected and then downloaded.
+
+Task 2
+The workflow of the data changes is the most important part of this study. If a community member proposes edits, this has to be send to an authoritative user and more importantly to the team who is finally responsible for the edits and the source data. Part of task two is to analyze this process and propose a solution where OSM can indeed function as a public editor within the NORA/GEMMA standards. Workflows of GEO data are built around standard software solutions like ArcGIS and QGIS. Offering tools and software solutions which will enable local governments to access, edit and contribute to the “Basisregistraties” in a structured way subscribes the NORA and GEMMA architectural guidelines. During this step Spotzi will investigate and propose to Geonovum Desktop and Online sync tools which can help in automating the data processes. Spotzi already has experience in using these tools as described in the following paragraphs.
+
+Desktop connection
+Spotzi built a software tool (plugin) which can connect in between GIS software packages and the Open Source database PostgreSQL. This plugin can connect to this database and GIS desktop software. The desktop software packages which are currently being supported are QGIS and ARCGIS Desktop. Not only the data but also the style (CSS) of this data can be synced. In the perfect situation the owner(s) of the data can perform syncs from their desktop to the platform as proposed by Geonovum. Spotzi sees this solution however as an intermediate step where a small group of people or local governments can easily test the exchange of their data with the proposed Geonovum OSM solution. These sync options however require extra handling and syncing of the data which might to lead to syncing the wrong data. Automated data exchange solutions are a better fit as described in the following paragraph.
+
+Online connection
+Spotzi uses a webservice for their clients to exchange data via XML, JSON or even shapefile format. Spotzi can even online sync with Open Source databases like PostgreSQL and closed the software system ARCGIS server. So with the current available knowledge an online data exchange protocol can be designed and made fully functional to existing data exchange solutions as created for PDOK, BAG and BRT. Offering an automated process where the proposed Geonovum OSM solution interacts with current exchange tools will create an ideal situation. Spotzi will investigate and propose these sync solutions.
+
+Task 3
+To make the datastore searchable Spotzi will provide the users with an API that makes a direct connection to the database. 
+Each user has his own API key which can be used to search datasets they have access to. 
+This API can also be used to programmatically edit the datasets. Again, only if the user has the rights to edit. Public datasets can be accessed without an API key. This service will not only allow the user to search the data, but also allows the users to export the data in their preferred format. Format types Spotzi will offer will contain text files like CSV, XML or JSON but also PNG/JPGs can be exported trough this API.
+
+Task 4
+As described before Spotzi is able to serve Spatial data in a non-spatial data format. Currently the following non-spatial data is supported:
+
+-	CSV
+-	XML
+-	JSON
+-	HTML
+-	TXT
+-	EXCEL
+
+The approach is not to create a separate set of web sources but to build a conversion tool which can extract the data into other formats using knowledge available within Spotzi.
+
+Task 5
+A tag in the OSM database describes a specific feature of a data element. A relation consists of one or more tags which is used to define relationships between data elements. There is a wide range of possibilities for all tags and relationships.  Extensive investigation of all possibilities is a key aspect for data management. Restrictions must be set and that is the way to solve this issue. For example with the use of domains.
+
+Domains must be set so rules are applied to individual attributes that define the possible values for that property. Two types must be defined:
+
+1.	Range domains e.g. zip codes restriction 1000 to 9999;
+2.	Coded value domains e.g. gender restriction female or male. 
+
+Besides domains also subtypes must be defined per data element. The combination of domains and subtypes must result in unique identifiers. When unique identifiers are set other formal definitions and objects of other data sources can be linked.
+
+Task 6
+As described in step 1 we propose the edits from the community to be performed in a separate layer. This layer can be made visible to the data owner and other non geo administrators. The changes can be seen online so in our opinion non geo administrators are able to understand the changes. As described in step 2 the toolchain can consist of a desktop or online connection.
+
+Part of this task is to analyze how non geo-spatial data can be added to the community layer. For instance a PDF with described info or a rough sketch of a proposed change to the data. Spotzi will investigate possibilities. Depending of the time left this function will or will not be part of the final demo. However all research will be made available to Geonovum.
+
+Task 7
+Our opinion is that the end user, both the authority, initiator as other stakeholders, should not need to worry about spatial reference systems. Most of the users are not GIS experts and don’t have any experience with spatial reference systems. The users should be able to import any dataset without any indication of the spatial reference system. 
+
+To make this possible the system should recognize the spatial reference system that is used (which is fairly easy until a certain extend). Then the system should project and transform all the imported data to a single reference system. We intend to make use of the PostGIS functionalities to do so. 
+
+Spotzi proposes to use the WGS 84 (EPSG:43261) system so the system can handle more than just Dutch datasets. When the user exports the data, the system needs to project and transform the data back to the original reference system. This way all the data in the system will be shown in the same way.
+
+Task 8
+We will use the LinkedGeoData repository on https://github.com/GeoKnow/LinkedGeoData to setup the scripts on one of our Ubuntu server. Then we can transform the new datasets to RDF and link this data with the knowledge bases in the Linking Open Data initiative. After this is setup we will have to see what issues arise while converting our data to LD. 
+
+Task 9
+To complete this topic we will demonstrate the capabilities of the platform we’ve created with all the components listed in the tasks above. This platform will make it possible for governments to easily publish their data and make it accessible to experts and people without geo-experience. This platform will use the strengths of the OSM platform to get feedback from the community and use this feedback to improve the geo data.
