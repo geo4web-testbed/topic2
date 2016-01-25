@@ -16,3 +16,7 @@ Here is a short overview of the different parts that Spotzi will address:
 <br>Task 7: Reference system
 <br>Task 8: Linked Data
 <br>Task 9: Showcase
+
+
+We're using the CartoDB platform as a fundament for our system. 
+CartoDB is an open source data visualization tool.
