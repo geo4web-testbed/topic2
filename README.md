@@ -6,12 +6,13 @@ Its goal is to find out how to make spatial data e.g. the Dutch Base registry Ad
 of 'government as a platform' i.e. make data easier to use by providing not only the data itself but also a community surrounding is.
 
 Here is a short overview of the different parts that Spotzi will address:
-Task 1: Updating data
-Task 2: Workflows
-Task 3: Searchable datastore
-Task 4: Non spatial data
-Task 5: Link to formal definitions
-Task 6: Toolchain
-Task 7: Reference system
-Task 8: Linked Data
-Task 9: Showcase
+
+<br>Task 1: Updating data
+<br>Task 2: Workflows
+<br>Task 3: Searchable datastore
+<br>Task 4: Non spatial data
+<br>Task 5: Link to formal definitions
+<br>Task 6: Toolchain
+<br>Task 7: Reference system
+<br>Task 8: Linked Data
+<br>Task 9: Showcase
