@@ -1,4 +1,6 @@
-In task one we address the issue of updating the data.
+# Task 1:
+
+In task 1 we address the issue of updating the data.
 
 Whereas the strength of OSM is its crowdsourcing/VGI5 capabilities, authoritative data should not be directly editable by the public. 
 Instead, input from citizens should be checked and approved prior to inclusion. 
