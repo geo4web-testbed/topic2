@@ -22,7 +22,7 @@ Visibility:
 - The data is visible to everyone
 - The data is visible to a selected group
 - The data is visible to noone
-Editability:
+<br>Editability:
 - The data is editable by everyone
 - The data is editable by a selected group
 - The data is editable by noone
