@@ -1,0 +1,26 @@
+<config>
+        <!-- Metadata -->
+        <meta>
+                <name>Session</name>
+                <version>0.1.1.0</version>
+        </meta>
+        <!-- Includes -->
+        <global>
+                <controllers>
+
+                </controllers>
+                <models>
+                        <model>InvalidateModel</model>
+                        <model>SessionModel</model>             <!-- Included by RegisterModel, AzcallbackModeland UserModel -->
+                        <model>RegisterModel</model>
+                        <model>StatusModel</model>
+                        <model>UserModel</model>
+                        <model>ValidateModel</model>
+                </models>
+                <helpers>
+                        <helper>JWT</helper>
+                </helpers>
+        </global>
+</config>
+<!-- Settings -->
+<!-- Constants? -->

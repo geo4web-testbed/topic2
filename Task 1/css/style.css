@@ -1,0 +1,1471 @@
+/*
+        Z-indexes
+        #map                            5
+        #home                           10
+        #menu #mainMenu                 15
+        #menu #mainMenu .menuSub:before 16
+        #notificationMsg                1001
+        .remodal-overlay                9999
+        .remodal-wrapper                10000
+*/
+
+/* General */
+
+html, body {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        font-family: 'Roboto', Sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        color: #222222;
+        overflow-x: auto;
+        overflow-y: hidden;
+}
+
+table {
+        border-collapse: collapse;
+}
+
+.floatLeft {
+        float: left;
+}
+
+.floatRight {
+        float: right;
+}
+
+.alignCenter {
+        display: block;
+        text-align: center;
+}
+
+.clear:after {
+        display: block;
+        clear: both;
+        height: 0;
+        content: ' ';
+}
+
+.overflowAuto {
+        width: inherit;
+        height: inherit;
+        overflow: auto;
+}
+
+.overflowHidden {
+        width: inherit;
+        height: inherit;
+        overflow: hidden;
+}
+
+.opaque {
+        visibility: visible;
+}
+
+.transparent {
+        visibility: hidden;
+}
+
+.hidden {
+        display: none;
+}
+
+.noSelect {
+        -webkit-user-select: none;
+        -khtml-user-drag: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -moz-user-select: -moz-none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        cursor: default;
+}
+
+b, strong {
+        font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6 {
+        margin: auto;
+        font-weight: 300;
+        text-transform: uppercase;
+}
+
+h1 {
+        font-size: 28px;
+}
+
+h2 {
+        font-size: 24px;
+}
+
+h3 {
+        font-size: 20px;
+}
+
+h4 {
+        font-size: 18px;
+}
+
+h5 {
+        font-size: 16px;
+}
+
+h6 {
+        font-size: 14px;
+}
+
+p {
+        margin: 5px 0;
+}
+
+img {
+        vertical-align: text-bottom;
+        border: none;
+}
+
+ul {
+        list-style: none;
+}
+
+.spotziGreen {
+        color: #8db832 !important;
+}
+
+.spotziOrange {
+        color: #ffb400 !important;
+}
+
+.spotziRed {
+        color: #fb0000 !important;
+}
+
+*, *:after, *:before {
+        padding: 0;
+        margin: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+        -moz-transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+        -o-transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+        transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+}
+
+/* Font Awesome */
+
+.fa-icon:before {
+        width: 1.25em;
+        font-family: FontAwesome;
+        text-align: center;
+        cursor: pointer;
+}
+
+/* Inputs & buttons */
+
+a {
+        color: #8db832;
+        text-decoration: none;
+        cursor: pointer;
+}
+
+input, textarea, select, option, .button {
+        padding: 8px;
+        min-height: 36px;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: 500;
+        color: #666666;
+        background-color: #ffffff;
+        border: none;
+        outline: none;
+}
+
+select {
+        padding: 0;
+        max-height: 175px;
+        overflow: auto;
+}
+
+option[selected] {
+        background-color: #eeeeee;
+}
+
+input:hover, input:focus,
+textarea:hover, textarea:focus,
+select:hover, select:focus,
+option:hover, option:focus {
+        color: #222222;
+}
+
+input[type=button], input[type=submit], .button {
+        padding: 4px;
+        font-size: 11px;
+        color: #ffffff;
+        background-color: #66a706;
+        text-transform: uppercase;
+        text-align: center;
+        cursor: pointer;
+}
+
+input[type=button]:hover, input[type=button]:focus,
+input[type=submit]:hover, input[type=submit]:focus,
+.button:hover, .button:focus {
+        background-color: #8db832;
+}
+
+input[type=button][disabled], input[type=button][disabled]:hover,
+input[type=button][disabled]:focus, input[type=submit][disabled],
+input[type=submit][disabled]:hover, input[type=submit][disabled]:focus {
+        color: #222222;
+        background-color: #aaaaaa;
+        cursor: default;
+}
+
+input.transparent {
+        background-color: transparent;
+}
+
+input.select {
+        text-overflow: ellipsis;
+}
+
+input.select:disabled {
+        background-color: #dddddd;
+}
+
+input.error {
+        color: #fb0000;
+}
+
+label.error {
+        position: relative;
+        margin: 10px 0 0;
+        font-weight: 500;
+        color: #fb0000;
+        background-color: #ffeeee;
+}
+
+label.error:before {
+        position: absolute;
+        top: -8px;
+        left: 8px;
+        width: 0;
+        height: 0;
+        content: '';
+        border-color: #ffeeee transparent;
+        border-style: solid;
+        border-width: 0 8px 8px;
+}
+
+.checkbox {
+        display: block;
+        cursor: pointer;
+}
+
+.checkbox > span {
+        float: left;
+}
+
+.checkbox input {
+        display: none;
+}
+
+.checkbox span {
+        display: block;
+        height: 18px;
+        width: 18px;
+        color: #666666;
+}
+
+.checkbox span:before {
+        font-family: FontAwesome;
+        font-size: 18px;
+        content: '\F096';                       /* fa-square-o */
+}
+
+.checkbox input:checked + span:before {
+        content: '\F046';                       /* fa-check-square-o */
+}
+
+/* Notifications */
+
+.note {
+        font-size: 12px;
+        color: #666666;
+}
+
+#notificationMsg {
+        z-index: 1001;
+}
+
+#notificationMsg > div {
+        display: none;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: rgba(0, 0, 0, 0.05);
+        border-left: 5px solid;
+}
+
+#notificationMsgSuccess {
+        border-color: #8db832 !important;
+}
+
+#notificationMsgNotice {
+        border-color: #ffb400 !important;
+}
+
+#notificationMsgError {
+        border-color: #fb0000 !important;
+}
+
+/* Leaflet */
+
+.leaflet-container * {
+        font-family: 'Roboto', Sans-serif !important;
+        font-weight: 300 !important;
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+        border-radius: 4px !important;
+}
+
+/* CartoDB */
+
+.cartodb-popup h4 {
+        color: #999999 !important;
+}
+
+.cartodb-legend.custom ul li, .cartodb-legend.category ul li, .cartodb-legend.color ul li {
+        font-size: 11px !important;
+        line-height: 9px !important;
+}
+
+.cartodb-logo img {
+        bottom: 10px !important;
+        left: 20px !important;
+}
+
+/* General */
+
+#map {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border: none;
+        z-index: 5;
+}
+
+#map *, #map *:after, #map *:before {
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+}
+
+.nicescroll-rails > div {
+        background-color: #444444 !important;
+        border: none !important;
+}
+
+.slideUp, .slideDown, .slideLeft, .slideRight {
+        display: none;
+        position: relative;
+        float: right;
+        margin: 6px;
+        font-size: 28px;
+        cursor: pointer;
+}
+
+.slideUp, .slideDown {
+        width: 28px;
+        height: 18px;
+        line-height: 12px;
+}
+
+.slideLeft, .slideRight {
+        width: 20px;
+        height: 26px;
+        line-height: 28px;
+}
+
+.titleBlock {
+        position: absolute;
+        top: 0;
+        padding: 5px;
+        width: 100%;
+        background-color: #444444;
+        overflow: hidden;
+}
+
+.descriptionBlock {
+        position: absolute;
+        bottom: 0;
+        padding: 5px;
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+}
+
+.tableView {
+        display: table;
+        position: relative;
+}
+
+.tableCellView {
+        display: table-cell;
+        position: relative;
+        vertical-align: middle;
+}
+
+.tableCellView > img {
+        display: block;
+        margin: auto;
+}
+
+.navigationLoading {
+        display: block;
+        margin: 0 auto;
+        width: 38px;
+        height: 16px;
+}
+
+.borders {
+        margin: 8px;
+        padding: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.borderTop {
+        margin-top: 8px;
+        padding-top: 8px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.borderBottom {
+        margin-bottom: 8px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.borderLeft {
+        margin-left: 8px;
+        padding-left: 8px;
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.borderRight {
+        margin-right: 8px;
+        padding-right: 8px;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Home */
+
+#home {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: #ffffff;
+        z-index: 10;
+}
+
+#home .note, #home .checkbox span {
+        color: #999999;
+}
+
+#home  .nicescroll-rails > div {
+        background-color: #666666 !important;
+}
+
+#home #homeMap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+}
+
+#home #homeWindow {
+        position: relative;
+        margin: -259px auto 0;
+        top: 50%;
+        left: 0;
+        width: 880px;
+        height: 518px;
+        padding: 40px;
+        background-color: rgba(0, 0, 0, 0.65);
+}
+
+#home #homeClose {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 5px 10px;
+        font-size: 23px;
+        cursor: pointer;
+}
+
+#home #homeSub {
+        position: relative;
+        width: 100%;
+}
+
+#home #homeButton span {
+        height: 48px;
+}
+
+#home #homeButton, #home #homeButton span {
+        width: 36px;
+}
+
+#home #homeButton span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 10px 10px 0;
+        font-size: 23px;
+        cursor: pointer;
+}
+
+#home #mapMenu {
+        padding: 0 0 16px;
+}
+
+#home #mapMenu a {
+        padding: 4px 8px;
+        margin: 0 8px;
+        font-size: 16px;
+        border: 1px solid #999999;
+        border-radius: 16px;
+}
+
+#home #mapMenu .active {
+        border-color: #ffffff;
+}
+
+#home #mapMenu #mainMenu a {
+        float: left;
+        color: #ffffff;
+}
+
+#home #mapMenu #userMenu a {
+        float: right;
+}
+
+#home #maps {
+        width: 100%;
+        height: 392px;
+}
+
+#home #maps ul {
+        display: none;
+        height: 100%;
+}
+
+#home #maps .mapBlock {
+        float: left;
+        margin: 0 8px 8px 0;
+        height: 192px;
+        width: 192px;
+        background-color: rgba(255, 255, 255, 0.05);
+        cursor: pointer;
+}
+
+#home #maps .mapBlock:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+}
+
+#home #maps .mapBlock:hover .titleBlock {
+        background-color: #555555;
+}
+
+#home #maps .mapBlock > div > span {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+}
+
+#home #maps .mapBlock > div > span:before {
+        font-size: 72px;
+}
+
+#home #maps .mapBlock.active .titleBlock {
+        background-color: #66a706;
+}
+
+#home #maps .mapBlock:hover.active .titleBlock {
+        background-color: #8db832;
+}
+
+#home #maps .mapBlock img {
+        max-width: 192px;
+        max-height: 192px;
+}
+
+#home #maps .mapBlock .title {
+        padding: 0 16px 0 0;
+        word-wrap: break-word;
+}
+
+#home #maps .mapBlock .delete {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 5px;
+}
+
+#home .menuList {
+        display: inline-block;
+        width: 100%;
+}
+
+#home .menuList > li {
+        position: relative;
+        padding: 8px;
+}
+
+/* Menu */
+
+#menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px 20px 0;
+        width: 100%;
+}
+
+#menu #mainMenu {
+        position: relative;
+        padding: 1px;
+        color: #ffffff;
+        background-color: rgba(0, 0, 0, 0.85);
+        z-index: 15;
+}
+
+#menu #mainMenu {
+        float: right;
+}
+
+#menu #menuButtons {
+        float: left;
+}
+
+#menu .menuButton {
+        display: none;
+        position: relative;
+        float: left;
+        padding: 6px 8px;
+        height: 36px;
+        font-size: 13px;
+        cursor: pointer;
+}
+
+#menu .menuButton .fa-icon:before {
+        font-size: 23px;
+}
+
+#menu .menuButton > span {
+        display: inline-block;
+}
+
+#menu .menuButton > span.title {
+        padding: 4px 3px 3px;
+        vertical-align: top;
+}
+
+#menu .menuSub {
+        display: none;
+        position: absolute;
+        top: 40px;
+        right: -1px;
+        width: 160px;
+        color: #222222;
+        background-color: #ffffff;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#menu .menuSub:before {
+        position: absolute;
+        top: -10px;
+        right: 7px;
+        width: 0;
+        height: 0;
+        content: "";
+        border-width: 0 10px 10px;
+        border-style: solid;
+        border-color: #ffffff transparent;
+        z-index: 16;
+}
+
+#menu .menuSub.active {
+        display: block;
+}
+
+#menu .menuSub .fa-icon:before {
+        float: left;
+        margin: 0 3px 0 0;
+        font-size: 16px;
+}
+
+#menu .menuSub > li {
+        padding: 8px;
+        text-align: right;
+}
+
+#menu .menuSub > li.borderTop {
+        margin: 0;
+        border-color: rgba(0, 0, 0, 0.1);
+}
+
+#menu .menuSub > li.menuUser,
+#menu .menuSub > li.menuNoUser {
+        font-weight: 500;
+        color: #ffffff;
+}
+
+#menu #menuAccount {
+        display: block;
+}
+
+#menu #menuAccount,
+#menu #menuAccount .menuSub > li.menuNoUser {
+        background-color: #aaaaaa;
+}
+
+#menu #menuAccount:hover,
+#menu #menuAccount .menuSub > li.menuNoUser:hover {
+        color: #ffffff;
+        background-color: #bbbbbb;
+}
+
+#menu #menuAccount.menuUser,
+#menu #menuAccount .menuSub > li.menuUser {
+        background-color: #66a706;
+}
+
+#menu #menuAccount.menuUser:hover,
+#menu #menuAccount .menuSub > li.menuUser:hover {
+        background-color: #8db832;
+}
+
+#mapUpdates #updatesMenu > li {
+        float: left;
+        margin: 0 16px 0 0;
+        color: #999999;
+        cursor: pointer;
+}
+
+#mapUpdates #updatesMenu > li.active {
+        color: inherit;
+        cursor: default;
+}
+
+#mapUpdates #updatesOverview > div {
+        display: none;
+}
+
+#mapSettings .userInput {
+        display: none;
+}
+
+/* Edit menu */
+
+#editMenu li.fa-icon.fa-circle:before {
+        padding: 0 13px 0 7px;
+        font-size: 6px !important;
+        line-height: 16px;
+}
+
+#editMsg {
+        display: none;
+        position: absolute;
+        right: 0;
+        bottom: 100px;
+        left: 0;
+        margin: 0 auto;
+        padding: 8px;
+        max-width: 300px;
+        text-align: center;
+        color: #ffffff;
+        background-color: #222222;
+        box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        z-index: 15;
+}
+
+/* Data and styling container */
+
+#editDataContainer {
+        display: none;
+        position: absolute;
+        padding: 16px;
+        width: 320px;
+        background-color: #ffffff;
+        box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+}
+
+#editDataContainer .editDatafield {
+        position: relative;
+        float: left;
+        margin: 0 0 8px 0;
+        width: 100%;
+}
+
+#editDataContainer .editDatafield > input {
+        width: 100%;
+        background-color: #eeeeee;
+}
+
+#editDataContainer .editDatafield > textarea {
+        width: 100%;
+        resize: none;
+        background-color: #eeeeee;
+        vertical-align: top;
+}
+#editDataContainer .styleOption {
+        float: left;
+        margin: 2px 0;
+        width: 100%;
+}
+
+#editDataContainer .styleOption > div {
+        float: left;
+        margin: 0 2px;
+        width: 47px;
+        line-height: 28px;
+}
+
+#editDataContainer #styleOptions #styleWarning {
+        display: block;
+        float: left;
+        margin: 0 2px;
+        line-height: 28px;
+        cursor: pointer;
+}
+
+#editDataContainer .styleOption > ul {
+        float: left;
+        overflow: hidden;
+}
+
+#editDataContainer .styleOption > ul > li {
+        float: left;
+        margin: 0 2px 0 0;
+        padding: 4px;
+        width: 27px;
+        height: 27px;
+        border: 1px solid #bbbbbb;
+        border-radius: 36px;
+        cursor: pointer;
+}
+
+#editDataContainer .styleOption > ul > li:hover {
+        border: 1px solid #222222;
+}
+
+#editDataContainer .styleOption > ul > li.selected {
+        border: 2px solid #222222;
+}
+
+#editDataContainer .styleOption > ul > li > img {
+        width: 16px;
+        height: 16px;
+}
+
+#editDataContainer input[type=button], #editDataContainer input[type=submit] {
+        float: right;
+        margin: 0 0 0 4px;
+        min-width: 64px;
+}
+
+.spotziLoader {
+        display: none;
+        position: relative;
+        width: 100%;
+}
+
+.spotziLoader > img {
+        width: 32px;
+        height: 32px;
+}
+
+.spotziLoader > img:before {
+        cursor: default;
+}
+
+/* Infowindow */
+
+#editInfoContainer {
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        z-index: 10;
+}
+
+#editInfoContainer .spotzi-popup-header {
+        position: relative;
+        padding: 17px 19px;
+        height: auto;
+        overflow: hidden;
+}
+
+#editInfoContainer .spotzi-popup-header > a {
+        color: #3470a9;
+}
+
+#editInfoContainer #infowindowEditButtons {
+        margin: 6px;
+}
+
+#editInfoContainer span.editInfoContainer-close-button {
+        position: absolute;
+        top: -20px;
+        right: -20px;
+	width: 26px;
+        height: 26px;
+        background: url(http://images.spotzi.com/mapbuilder/editor/icons/headers.png) no-repeat -226px -40px;
+	cursor: pointer;
+}
+
+#editInfoContainer div.cartodb-popup-tip-container {
+        bottom: -54px;
+}
+
+.cartodb-popup-header.my-map {
+        background: #8db842 !important;
+        background: linear-gradient(#8db842, #799f12) !important;
+}
+
+/* Edit buttons - all infowindows */
+
+#infowindowEditButtons {
+        float: right;
+        border-radius: 3px;
+        overflow: hidden;
+}
+
+#infowindowEditButtons .editButton {
+        display: block;
+        float: left;
+        width: 29px;
+        height: 24px;
+        font-size: 16px;
+        text-align: center;
+        background-color: #e1e1e1;
+        background-image: url(http://images.spotzi.com/mapbuilder/editor/icons/map-sd5a47f0b2e.png);
+        background-image: url(http://images.spotzi.com/mapbuilder/editor/icons/map-sd5a47f0b2e.png), linear-gradient(#f9f9f9, #e1e1e1);
+        border: 1px solid #b0b0b0;
+        cursor: pointer;
+}
+
+#infowindowEditButtons .editButton.disabled {
+        display: none;
+}
+
+#infowindowEditButtons #editFeatureData {
+        background-position: -4px -809px, center;
+        background-position-x: -4px, 0;
+        background-position-y: -809px, 0;
+        border-right: none;
+}
+
+#infowindowEditButtons #editFeatureLocation {
+        background-position: -35px -809px, center;
+        background-position-x: -35px, 0;
+        background-position-y: -809px, 0;
+        border-right: none;
+}
+
+#infowindowEditButtons #deleteFeature {
+        background-position: -66px -809px, center;
+        background-position-x: -66px, 0;
+        background-position-y: -809px, 0;
+}
+
+/* Media queries */
+
+@media only screen and (max-height: 768px), only screen and (max-width: 900px) {
+        #home #homeWindow {
+                margin: -227px auto 0;
+                height: 454px;
+                width: 752px;
+        }
+
+        #home #homeButton {
+                line-height: 20px;
+        }
+
+        #home #homeButton span {
+                height: 40px;
+        }
+
+        #home #homeButton, #home #homeButton span {
+                width: 32px;
+        }
+
+        #home #maps {
+                height: 328px;
+        }
+
+        #home #maps .mapBlock {
+                height: 160px;
+                width: 160px;
+        }
+
+        #home #maps .mapBlock img {
+                max-width: 160px;
+                max-height: 160px;
+        }
+
+        #home .menuField {
+                margin: 0 20px 0 0;
+        }
+
+        #home .menuField > input, #home .menuField > select,
+        #home .menuField option, #home .menuField .chosen-container {
+                width: 160px !important;
+        }
+
+        #home .menuField > input[type=text], #home .menuField > textarea {
+                width: 320px !important;
+        }
+}
+
+@media only screen and (max-width: 768px) {
+        #home #homeWindow {
+                width: 584px;
+        }
+
+        #home #mapMenu a {
+                margin: 0 4px;
+                font-size: 15px;
+        }
+
+        #menu .menuButton > span.title {
+                display: none;
+        }
+}
+
+@media only screen and (max-height: 576px) {
+        #home #homeWindow {
+                margin: -143px auto 0;
+                height: 286px;
+        }
+
+        #home #maps {
+                height: 160px;
+        }
+}
+
+/* Remodal */
+
+.remodal p, .remodal div {
+        margin: 8px 0 0;
+}
+
+.remodal h1, .remodal h2, .remodal h3 {
+        font-size: 18px;
+}
+
+.remodal input:not([type=button]):not([type=submit]) {
+        width: 100%;
+}
+
+.remodal input:not([type=button]):not([type=submit]),
+.remodal textarea, .remodal select, .remodal option,
+.remodal .chosen-container .chosen-drop, .remodal .chosen-container-single .chosen-single,
+.remodal .chosen-container-multi .chosen-choices, .remodal .chosen-container-active.chosen-with-drop .chosen-single {
+        background-color: #eeeeee;
+}
+
+.remodal input[type=button], .remodal input[type=submit] {
+        float: right;
+        margin: 0 0 0 8px;
+        width: auto;
+}
+
+.remodal input.select:disabled  {
+        background-color: #cccccc;
+}
+
+.remodal .inputHalf input:not([type=button]):not([type=submit]),
+.remodal .chosen-container {
+        width: 200px !important;
+        margin: 0;
+}
+
+.remodal .chosen-container div {
+        margin: 0;
+}
+
+.remodal .borders, .remodal .borderTop, .remodal .borderBottom,
+.remodal .borderLeft, .remodal .borderRight {
+        border-color: rgba(0, 0, 0, 0.1);
+}
+
+.remodal .loading {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.85);
+        text-align: center;
+}
+
+.remodal .loading > div {
+        position: relative;
+        top: 50%;
+        margin: -25px 0 0;
+        font-size: 40px;
+}
+
+.remodal .loading > div:before {
+        cursor: default;
+}
+
+.remodal form {
+        position: relative;
+}
+
+.remodal form .contentTitle {
+        float: left;
+}
+
+.remodal form .contentPrice {
+        float: right;
+}
+
+.remodal form .note span {
+        float: left;
+        padding: 10px 0;
+}
+
+.remodal table {
+        width: 100%;
+}
+
+.remodal table tr td:first-child {
+        font-weight: 500;
+}
+
+.remodal table tr td {
+        padding: 8px;
+        width: 50%;
+}
+
+.remodal .dataTable tr:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+}
+
+.remodal .dataTable tr th {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.remodal .dataTable tr td {
+        font-weight: 300 !important;
+        width: auto;
+        cursor: pointer;
+}
+
+.remodal .dataTable tr th, .remodal .dataTable tr td {
+        padding: 8px;
+}
+
+.remodal .title {
+        float: left;
+}
+
+.remodal .back {
+        float: right;
+        color: #8db832;
+        cursor: pointer;
+}
+
+/* Hide scroll bar */
+
+html.remodal-is-locked {
+        overflow: hidden;
+}
+
+/* Anti FOUC */
+
+.remodal, [data-remodal-id] {
+        display: none;
+}
+
+/* Necessary styles of the overlay */
+
+.remodal-overlay {
+        display: none;
+        position: fixed;
+        top: -5000px;
+        right: -5000px;
+        bottom: -5000px;
+        left: -5000px;
+        z-index: 9999;
+}
+
+/* Necessary styles of the wrapper */
+
+.remodal-wrapper {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        text-align: center;
+        z-index: 10000;
+}
+
+.remodal-wrapper:after {
+        display: inline-block;
+        margin-left: -0.05em;
+        height: 100%;
+        content: '';
+}
+
+/* Fix iPad, iPhone glitches */
+
+.remodal-overlay,
+.remodal-wrapper {
+        backface-visibility: hidden;
+}
+
+/* Necessary styles of the modal dialog */
+
+.remodal {
+        position: relative;
+        text-size-adjust: 100%;
+}
+
+.remodal-is-initialized {
+        /* Disable Anti-FOUC */
+        display: inline-block;
+}
+
+/* ==========================================================================
+   Remodal's default mobile first theme
+   ========================================================================== */
+
+/* Default theme styles for the background */
+
+.remodal-bg.remodal-is-opening,
+.remodal-bg.remodal-is-opened {
+        filter: blur(3px);
+}
+
+/* Default theme styles of the overlay */
+
+.remodal-overlay {
+        background-color: rgba(0, 0, 0, 0.3);
+}
+
+.remodal-overlay.remodal-is-opening,
+.remodal-overlay.remodal-is-closing {
+        animation-fill-mode: forwards;
+}
+
+.remodal-overlay.remodal-is-opening {
+        animation: remodal-overlay-opening-keyframes 0.3s;
+}
+
+.remodal-overlay.remodal-is-closing {
+        animation: remodal-overlay-closing-keyframes 0.3s;
+}
+
+/* Default theme styles of the wrapper */
+
+.remodal-wrapper {
+        padding: 10px 10px 0;
+}
+
+/* Default theme styles of the modal dialog */
+
+.remodal {
+        padding: 24px;
+        margin-bottom: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: #ffffff;
+        text-align: left;
+        transform: translate3d(0, 0, 0);
+}
+
+.remodal.remodal-is-opening,
+.remodal.remodal-is-closing {
+        animation-fill-mode: forwards;
+}
+
+.remodal.remodal-is-opening {
+        animation: remodal-opening-keyframes 0.3s;
+}
+
+.remodal.remodal-is-closing {
+        animation: remodal-closing-keyframes 0.3s;
+}
+
+/* Vertical align of the modal dialog */
+
+.remodal,
+.remodal-wrapper:after {
+        vertical-align: middle;
+}
+
+/* Close button */
+
+.remodal-close {
+        display: block;
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        margin: 0;
+        padding: 0;
+        width: 24px;
+        height: 24px;
+        overflow: visible;
+        cursor: pointer;
+        text-decoration: none;
+        color: #999999;
+        border: 0;
+        outline: 0;
+        background-color: transparent;
+}
+
+.remodal-close:hover {
+        color: #222222;
+}
+
+.remodal-close:before {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 24px;
+        font-family: FontAwesome;
+        font-size: 16px;
+        line-height: 24px;
+        content: '\F00D';                       /* fa-times */
+        text-align: center;
+}
+
+/* Dialog buttons */
+
+.remodal-confirm,
+.remodal-cancel {
+        display: inline-block;
+        margin: 0;
+        padding: 12px 0;
+        min-width: 110px;
+        overflow: visible;
+        cursor: pointer;
+        text-align: center;
+        font: inherit;
+        vertical-align: middle;
+        text-decoration: none;
+        border: 0;
+        outline: 0;
+}
+
+.remodal-confirm {
+        color: #fff;
+        background-color: #81c784;
+}
+
+.remodal-confirm:hover {
+        background-color: #66bb6a;
+}
+
+.remodal-cancel {
+        color: #fff;
+        background-color: #e57373;
+}
+
+.remodal-cancel:hover {
+        background-color: #ef5350;
+}
+
+/* Remove inner padding and border in Firefox 4+ for the button tag. */
+
+.remodal-confirm::-moz-focus-inner,
+.remodal-cancel::-moz-focus-inner {
+        padding: 0;
+        border: 0;
+}
+
+/* Keyframes
+   ========================================================================== */
+
+@keyframes remodal-opening-keyframes {
+        from {
+                transform: scale(1.05);
+                opacity: 0;
+                filter: alpha(opacity=0);
+        }
+        to {
+                transform: none;
+                opacity: 1;
+                filter: alpha(opacity=100);
+        }
+}
+
+@keyframes remodal-closing-keyframes {
+        from {
+                transform: scale(1);
+                opacity: 1;
+                filter: alpha(opacity=100);
+        }
+        to {
+                transform: scale(0.95);
+                opacity: 0;
+                filter: alpha(opacity=0);
+        }
+}
+
+@keyframes remodal-overlay-opening-keyframes {
+        from {
+                opacity: 0;
+                filter: alpha(opacity=0);
+        }
+        to {
+                opacity: 1;
+                filter: alpha(opacity=100);
+        }
+}
+
+@keyframes remodal-overlay-closing-keyframes {
+        from {
+                opacity: 1;
+                filter: alpha(opacity=100);
+        }
+        to {
+                opacity: 0;
+                filter: alpha(opacity=0);
+        }
+}
+
+/* Media queries
+   ========================================================================== */
+
+@media only screen and (min-width: 421px) {
+        .remodal {
+                max-width: 480px;
+        }
+}

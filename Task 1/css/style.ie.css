@@ -1,0 +1,67 @@
+/* General */
+
+input, textarea, select, option {
+        min-height: 0;
+}
+
+#notificationMsg > div {
+        background-color: #eeeeee;
+}
+
+.borders, .borderTop, .borderBottom, .borderLeft, .borderRight {
+        border-color: #eeeeee;
+}
+
+/* Home */
+
+#home #homeWindow, #menu #mainMenu {
+        background-color: #222222;
+}
+
+#home #maps .mapBlock {
+        background-color: #282828;
+}
+
+#home #maps .mapBlock:hover {
+        background-color: #333333;
+}
+
+/* Menu */
+
+#menu #mainMenu .menuSub,
+#menu #mainMenu .menuSub > li.borderTop {
+        border-color: #282828;
+}
+
+/* Remodal */
+
+.remodal {
+        width: 480px;
+}
+
+.remodal input[type=text], .remodal input[type=password], .remodal input[type=email],
+.remodal input[type=file], .remodal input[type=number], .remodal input[type=date],
+.remodal input[type=search] {
+        background-color: #eeeeee;
+}
+
+.remodal .borders, .remodal .borderTop, .remodal .borderBottom,
+.remodal .borderLeft, .remodal .borderRight {
+        border-color: #222222;
+}
+
+.remodal .dataTable tr:hover {
+        background-color: #f4f4f4;
+}
+
+.remodal .dataTable tr th {
+        border-color: #eeeeee;
+}
+
+.remodal form .loading {
+        background-color: #ffffff;
+}
+
+.remodal-overlay {
+        background-color: #222222;
+}

@@ -1,0 +1,25 @@
+<config>
+        <!-- Metadata -->
+        <meta>
+                <name>Visualization</name>
+                <version>0.1.3.0</version>
+        </meta>
+        <!-- Includes -->
+        <global>
+                <controllers>
+
+                </controllers>
+                <models>
+                        <model>InspectModel</model>             <!-- Included by CreateModel -->
+                        <model>CreateModel</model>
+                        <model>DeleteModel</model>
+                        <model>PropositionModel</model>
+                        <model>UpdateModel</model>
+                </models>
+                <helpers>
+
+                </helpers>
+        </global>
+</config>
+<!-- Settings -->
+<!-- Constants? -->

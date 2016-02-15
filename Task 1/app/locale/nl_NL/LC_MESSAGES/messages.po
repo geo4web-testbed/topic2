@@ -1,0 +1,457 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Geonovum\n"
+"POT-Creation-Date: 2016-01-07 12:30+0100\n"
+"PO-Revision-Date: 2016-01-07 12:30+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.4\n"
+"X-Poedit-Basepath: ../../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: code/core/helper/ErrorHandler.php:90
+msgid ""
+"An unexpected error has occured.<br>If this error keeps occuring, please "
+"contact your vendor for assistance"
+msgstr ""
+"Er is een onverwachte fout opgetreden.<br>Als deze fout blijft optreden, "
+"neem dan voor ondersteuning contact op met uw verstrekker"
+
+#: code/core/helper/ErrorHandler.php:90
+#, php-format
+msgid "<br>Message: %s"
+msgstr "<br>Bericht: %s"
+
+#: code/core/view/header.php:7
+msgid "Spotzi Data Visualization"
+msgstr "Spotzi Data Visualisatie"
+
+#: code/core/view/header.php:8
+msgid "spotzi, data, info, information, visualization, map, navigation"
+msgstr ""
+"spotzi, rapporten, woning, huis, woningwaarde, taxatie, kadaster, buurt"
+
+#: code/core/view/index.php:14
+msgid ""
+"This application uses Javascript. Please check if your browser supports "
+"Javascript and if it's enabled."
+msgstr ""
+"Deze applicatie gebruikt Javascript. Controleer of uw browser Javascript "
+"ondersteunt en of het ingeschakeld is."
+
+#: code/module/Overview/view/home.php:84 code/module/Overview/view/home.php:87
+#: code/module/Overview/view/home.php:285
+#: code/module/Overview/view/home.php:293
+msgid "Create map"
+msgstr ""
+
+#: code/module/Overview/view/home.php:93 code/module/Overview/view/home.php:96
+#: code/module/Overview/view/home.php:265
+#: code/module/Overview/view/home.php:276
+msgid "Import data"
+msgstr ""
+
+#: code/module/Overview/view/home.php:184
+#: code/module/Overview/view/index.php:218
+#: code/module/Overview/view/menu.php:185
+#: code/module/Overview/view/menu.php:205
+#: code/module/Overview/view/menu.php:249
+#: code/module/Overview/view/menu.php:289
+#: code/module/Overview/view/menu.php:328
+msgid ""
+"An unexpected error has occured.<br>If this error keeps occuring, please "
+"contact our webmaster at info@spotzi.com for assistance."
+msgstr ""
+
+#: code/module/Overview/view/home.php:222
+msgid ""
+"Are you sure you want to delete this map permanently?\\nThis cannot be "
+"undone."
+msgstr ""
+
+#: code/module/Overview/view/home.php:251
+msgid "Community Maps"
+msgstr ""
+
+#: code/module/Overview/view/home.php:252
+#: code/module/Overview/view/menu.php:370
+msgid "My Maps"
+msgstr ""
+
+#: code/module/Overview/view/home.php:267
+msgid "Please choose the file to import."
+msgstr ""
+
+#: code/module/Overview/view/home.php:269
+msgid ""
+"The file was uploaded successfully and is being added to your account, you "
+"will receive another e-mail once this process is finished. Afterwards you "
+"will have to refresh this page in order to find the map in My Maps."
+msgstr ""
+
+#: code/module/Overview/view/home.php:271
+#: code/module/Overview/view/home.php:290
+msgid "Map name"
+msgstr ""
+
+#: code/module/Overview/view/home.php:275
+#, php-format
+msgid "Limit: %s, file types: CSV, XLS(X), GeoJSON, ZIP, KML, GPX"
+msgstr ""
+
+#: code/module/Overview/view/home.php:287
+msgid "Please pick a name for your new map."
+msgstr ""
+
+#: code/module/Overview/view/home.php:289
+msgid "An error occured while creating the map"
+msgstr ""
+
+#: code/module/Overview/view/home.php:292
+msgid "Afterwards you can add data to the map"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:10
+msgid "No results were found"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:11 code/module/Overview/view/menu.php:12
+msgid "Select..."
+msgstr ""
+
+#: code/module/Overview/view/menu.php:351
+#: code/module/Overview/view/menu.php:353
+msgid "Maps"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:356
+#: code/module/Overview/view/menu.php:358
+#: code/module/Overview/view/menu.php:435
+msgid "Map updates"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:360
+#: code/module/Overview/view/menu.php:362
+#: code/module/Overview/view/menu.php:485
+msgid "Map settings"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:366
+#: code/module/Overview/view/menu.php:369
+msgid "Account"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:371
+msgid "Log out"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:373
+#: code/module/Overview/view/menu.php:374
+#: code/module/Overview/view/menu.php:384
+#: code/module/Overview/view/menu.php:394
+msgid "Log in"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:373
+msgid "Not logged in"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:375
+#: code/module/Overview/view/menu.php:538
+#: code/module/Overview/view/menu.php:548
+msgid "Register"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:386
+msgid ""
+"In order to gain access to this function you must log in to your account."
+msgstr ""
+
+#: code/module/Overview/view/menu.php:390
+msgid "User name or email address"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:391
+#: code/module/Overview/view/menu.php:545
+#: code/module/Session/model/RegisterModel.php:70
+msgid "Password"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:393
+msgid ""
+"Don't have an account? <a href=\"javascript:void(0);\" onclick="
+"\"showRegister();\">Click here</a> to create one."
+msgstr ""
+
+#: code/module/Overview/view/menu.php:406
+msgid "My account"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:408
+msgid "Profile"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:411
+#: code/module/Overview/view/menu.php:543
+#: code/module/Session/model/RegisterModel.php:64
+#: code/module/Session/view/mail/register.php:73
+msgid "User name"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:415
+#: code/module/Overview/view/menu.php:544
+#: code/module/Session/model/RegisterModel.php:67
+#: code/module/Session/view/mail/register.php:77
+msgid "Email address"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:421
+#: code/module/Overview/view/menu.php:428
+msgid "Change password"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:423
+msgid "Your password was successfully changed"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:425
+msgid "Current password"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:426
+msgid "New password"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:427
+msgid "Confirm password"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:439
+msgid "Recent"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:440
+#: code/module/Overview/view/menu.php:477
+msgid "Proposed"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:441
+#: code/module/Overview/view/menu.php:478
+msgid "My updates"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:449
+msgid "Map"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:450
+msgid "User"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:451
+msgid "Status"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:452
+msgid "Created at"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:459
+#: code/module/Overview/view/menu.php:465
+msgid "Pending"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:471
+msgid "<span class=\"spotziGreen\">Accepted</span>"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:488
+msgid "The settings were saved successfully."
+msgstr ""
+
+#: code/module/Overview/view/menu.php:489
+msgid "The settings could not be saved."
+msgstr ""
+
+#: code/module/Overview/view/menu.php:491
+msgid "Map privacy"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:494
+#: code/module/Overview/view/menu.php:508
+msgid "Public"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:495
+#: code/module/Overview/view/menu.php:509
+msgid "Restricted"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:496
+#: code/module/Overview/view/menu.php:510
+msgid "Private"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:499
+#: code/module/Overview/view/menu.php:513
+msgid "Allowed users"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:500
+#: code/module/Overview/view/menu.php:514
+msgid "Comma separated list of user names"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:505
+msgid "Edit privacy"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:519
+msgid "Edit mode"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:524
+msgid "Use update propositions"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:529
+msgid "Update settings"
+msgstr ""
+
+#: code/module/Overview/view/menu.php:540
+msgid "In order to gain access to this function you must create an account."
+msgstr ""
+
+#: code/module/Overview/view/menu.php:547
+msgid ""
+"Already have an account? <a href=\"javascript:void(0);\" onclick="
+"\"showLogin();\">Click here</a> to log in."
+msgstr ""
+
+#: code/module/Overview/view/menu.php:552
+msgid ""
+"By registering you are accepting the <a href=\"http://www.spotzi.com/en/"
+"terms-of-service/\" target=\"_blank\">terms and conditions</a> of the "
+"service and the <a href=\"http://www.spotzi.com/en/privacy/\" target=\"_blank"
+"\">privacy policy</a>."
+msgstr ""
+
+#: code/module/Session/model/RegisterModel.php:112
+#, php-format
+msgid "%s - your Spotzi Mapbuilder account"
+msgstr ""
+
+#: code/module/Session/model/RegisterModel.php:118
+msgid "An unknown error occured while registering"
+msgstr ""
+
+#: code/module/Session/model/UserModel.php:78
+msgid "An unknown error occured while updating"
+msgstr ""
+
+#: code/module/Session/model/UserModel.php:81
+msgid "The new password can not be equal to the old password"
+msgstr ""
+
+#: code/module/Session/model/ValidateModel.php:44
+msgid "Your user name or password is incorrect"
+msgstr ""
+
+#: code/module/Session/view/mail/password.php:57
+#: code/module/Session/view/mail/register.php:57
+msgid "Dear customer,"
+msgstr ""
+
+#: code/module/Session/view/mail/password.php:67
+#, php-format
+msgid ""
+"You are receiving this email because you indicated that you forgot the "
+"password for Spotzi Mapbuilder account %s. Click the link below to change "
+"your password. The link will expire in 2 days."
+msgstr ""
+
+#: code/module/Session/view/mail/password.php:84
+msgid "Click here to change your password"
+msgstr ""
+
+#: code/module/Session/view/mail/password.php:98
+#: code/module/Session/view/mail/register.php:100
+msgid "Best regards,"
+msgstr ""
+
+#: code/module/Session/view/mail/password.php:108
+#: code/module/Session/view/mail/register.php:110
+msgid "Veilingdreef 17"
+msgstr ""
+
+#: code/module/Session/view/mail/password.php:111
+#: code/module/Session/view/mail/register.php:113
+msgid "4614RX, Bergen op Zoom"
+msgstr ""
+
+#: code/module/Session/view/mail/password.php:114
+#: code/module/Session/view/mail/register.php:116
+msgid "The Netherlands"
+msgstr ""
+
+#: code/module/Session/view/mail/password.php:121
+#: code/module/Session/view/mail/register.php:123
+msgid "+31 164 24 00 00"
+msgstr ""
+
+#: code/module/Session/view/mail/password.php:129
+#: code/module/Session/view/mail/register.php:131
+msgid "http://www.spotzi.com/en/"
+msgstr ""
+
+#: code/module/Session/view/mail/password.php:129
+#: code/module/Session/view/mail/register.php:131
+msgid "Website"
+msgstr ""
+
+#: code/module/Session/view/mail/password.php:131
+#: code/module/Session/view/mail/register.php:133
+msgid "info@spotzi.com"
+msgstr ""
+
+#: code/module/Session/view/mail/password.php:131
+#: code/module/Session/view/mail/register.php:133
+msgid "Contact"
+msgstr ""
+
+#: code/module/Session/view/mail/password.php:133
+#: code/module/Session/view/mail/register.php:135
+#, php-format
+msgid "%s - problem with Spotzi Mapbuilder account"
+msgstr ""
+
+#: code/module/Session/view/mail/password.php:133
+#: code/module/Session/view/mail/register.php:135
+msgid "Report a problem"
+msgstr ""
+
+#: code/module/Session/view/mail/register.php:67
+msgid ""
+"Thank you for creating your personal  account! Below you will find details "
+"of your account."
+msgstr ""
+
+#: code/module/Session/view/mail/register.php:88
+msgid ""
+"You can log in using your user name or email address in combination with "
+"your password by <a href=\"http://www.spotzi.com/en/\">clicking here</a>. "
+"Afterwards you will have the ability to order maps, edit maps and export "
+"data from maps."
+msgstr ""
+
+#: code/module/Visualization/model/PropositionModel.php:65
+#, php-format
+msgid "Update propositions for %s"
+msgstr ""

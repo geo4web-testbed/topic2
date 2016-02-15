@@ -1,0 +1,34 @@
+<config>
+        <!-- Metadata -->
+        <meta>
+                <name>Core</name>
+                <version>0.1.4.0</version>
+                <active>true</active>
+        </meta>
+        <!-- Includes -->
+        <global>
+                <models>
+                        <!-- In correct order to avoid include problems -->
+                        <model>database/AbstractDatabase</model>
+                        <model>database/SqlServerDatabase</model>
+                        <model>AbstractModel</model>                    <!-- Included by CoreModel and ModuleModel -->
+                        <model>CoreModel</model>
+                        <model>ModuleModel</model>
+                        <model>Session</model>
+                </models>
+                <helpers>
+                        <helper>ErrorHandler</helper>                   <!-- Include this as soon as possible -->
+                        <helper>Collection</helper>
+                        <helper>Color</helper>
+                        <helper>Connectivity</helper>
+                        <helper>Date</helper>
+                        <helper>File</helper>
+                        <helper>Header</helper>
+                        <helper>Mail</helper>
+                        <helper>String</helper>
+                        <helper>Url</helper>
+                </helpers>
+        </global>
+</config>
+<!-- Settings -->
+<!-- Constants? -->

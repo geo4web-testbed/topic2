@@ -1,0 +1,23 @@
+<config>
+        <!-- Metadata -->
+        <meta>
+                <name>Import</name>
+                <version>0.1.3.0</version>
+        </meta>
+        <!-- Includes -->
+        <global>
+                <controllers>
+
+                </controllers>
+                <models>
+                        <model>ImportModel</model>              <!-- Included by OrderModel and FinishModel -->
+                        <model>FinishModel</model>
+                        <model>VisualizationModel</model>
+                </models>
+                <helpers>
+
+                </helpers>
+        </global>
+</config>
+<!-- Settings -->
+<!-- Constants? -->

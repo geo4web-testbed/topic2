@@ -1,0 +1,21 @@
+<config>
+        <!-- Metadata -->
+        <meta>
+                <name>Overview</name>
+                <version>0.1.4.0</version>
+        </meta>
+        <!-- Includes -->
+        <global>
+                <controllers>
+
+                </controllers>
+                <models>
+                        <model>IndexModel</model>
+                </models>
+                <helpers>
+
+                </helpers>
+        </global>
+</config>
+<!-- Settings -->
+<!-- Constants? -->

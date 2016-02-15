@@ -1,0 +1,45 @@
+<!-- http://www.freeformatter.com/xsd-generator.html -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+        <xs:element name="config">
+                <xs:complexType>
+                        <xs:sequence>
+                                <xs:element name="meta">
+                                        <xs:complexType>
+                                                <xs:sequence>
+                                                        <xs:element type="xs:string" name="name" minOccurs="1" maxOccurs="1"/>
+                                                        <xs:element type="xs:string" name="version" minOccurs="1" maxOccurs="1"/>
+                                                        <xs:element type="xs:string" name="active" minOccurs="0" maxOccurs="1"/>
+                                                </xs:sequence>
+                                        </xs:complexType>
+                                </xs:element>
+                                <xs:element name="global" minOccurs="0" maxOccurs="1">
+                                        <xs:complexType>
+                                                <xs:sequence>
+                                                        <xs:element name="controllers" minOccurs="0" maxOccurs="1">
+                                                                <xs:complexType>
+                                                                        <xs:sequence>
+                                                                                <xs:element type="xs:string" name="controller" minOccurs="0" maxOccurs="unbounded"/>
+                                                                        </xs:sequence>
+                                                                </xs:complexType>
+                                                        </xs:element>
+                                                        <xs:element name="models" minOccurs="0" maxOccurs="1">
+                                                                <xs:complexType>
+                                                                        <xs:sequence>
+                                                                                <xs:element type="xs:string" name="model" minOccurs="0" maxOccurs="unbounded"/>
+                                                                        </xs:sequence>
+                                                                </xs:complexType>
+                                                        </xs:element>
+                                                        <xs:element name="helpers" minOccurs="0" maxOccurs="1">
+                                                                <xs:complexType>
+                                                                        <xs:sequence>
+                                                                                <xs:element type="xs:string" name="helper" minOccurs="0" maxOccurs="unbounded"/>
+                                                                        </xs:sequence>
+                                                                </xs:complexType>
+                                                        </xs:element>
+                                                </xs:sequence>
+                                        </xs:complexType>
+                                </xs:element>
+                        </xs:sequence>
+                </xs:complexType>
+        </xs:element>
+</xs:schema>
