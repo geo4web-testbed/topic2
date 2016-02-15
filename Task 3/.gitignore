@@ -1,0 +1,13 @@
+config/environments/*.js
+logs/*.log
+pids/*.pid
+*.sock
+test/tmp/*
+node_modules*
+.idea/*
+tools/munin/cdbsqlapi.conf
+test/redis.pid
+test/test.log
+test/acceptance/oauth/venv/*
+coverage/
+npm-debug.log
