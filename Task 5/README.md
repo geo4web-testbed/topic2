@@ -7,3 +7,7 @@ A formal definition is the definition that is created by the Authority of the da
 In practice, we see that users of a dataset have a different definition for the same items. 
 For example the Authority of a dataset can set the formal definition of an item to "road" while a user can name the item "street".
 In this task we try to link the non-formal definition to the formal definition.
+
+We've added links to formal definitions in our WIKI. 
+You can find an example of the links to these formal definitions here:
+http://geonovumwiki.spotzi.com/index.php?title=FunctieWeg
