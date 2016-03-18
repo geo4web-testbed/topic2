@@ -20,3 +20,11 @@ Here is a short overview of the different parts that Spotzi will address:
 
 We're using the CartoDB platform as a fundament for our system. 
 CartoDB is an open source data visualization tool.
+
+
+Here are some links that we've created for our research:
+The platform itself:        http://geonovum.spotzi.com
+WIKI (non-geo environment): http://geonovumwiki.spotzi.com/
+
+Feel free to test for yourself and contact us if you have any questions
+
