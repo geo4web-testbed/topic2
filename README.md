@@ -1,3 +1,4 @@
+<pre>
 # A usable spatial data publication platform
 This repository is a placeholder for project management around developments in topic2 of the spatial-data-on-the-web testbed.
 
@@ -7,15 +8,15 @@ of 'government as a platform' i.e. make data easier to use by providing not only
 
 Here is a short overview of the different parts that Spotzi will address:
 
-<br>Task 1: Updating data
-<br>Task 2: Workflows
-<br>Task 3: Searchable datastore
-<br>Task 4: Non spatial data
-<br>Task 5: Link to formal definitions
-<br>Task 6: Toolchain
-<br>Task 7: Reference system
-<br>Task 8: Linked Data
-<br>Task 9: Showcase
+Task 1: Updating data
+Task 2: Workflows
+Task 3: Searchable datastore
+Task 4: Non spatial data
+Task 5: Link to formal definitions
+Task 6: Toolchain
+Task 7: Reference system
+Task 8: Linked Data
+Task 9: Showcase
 
 
 We're using the CartoDB platform as a fundament for our system. 
@@ -23,8 +24,8 @@ CartoDB is an open source data visualization tool.
 
 
 Here are some links that we've created for our research:
-<br>The platform itself:        http://geonovum.spotzi.com
-<br>WIKI (non-geo environment): http://geonovumwiki.spotzi.com/
-<br>
-<br>Feel free to test for yourself and contact us if you have any questions
+The platform itself:<tab><tab>http://geonovum.spotzi.com
+WIKI (non-geo environment): http://geonovumwiki.spotzi.com/
 
+Feel free to test for yourself and contact us if you have any questions
+</pre>
