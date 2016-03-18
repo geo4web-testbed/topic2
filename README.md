@@ -23,8 +23,8 @@ CartoDB is an open source data visualization tool.
 
 
 Here are some links that we've created for our research:
-The platform itself:        http://geonovum.spotzi.com
-WIKI (non-geo environment): http://geonovumwiki.spotzi.com/
-
-Feel free to test for yourself and contact us if you have any questions
+<br>The platform itself:        http://geonovum.spotzi.com
+<br>WIKI (non-geo environment): http://geonovumwiki.spotzi.com/
+<br>
+<br>Feel free to test for yourself and contact us if you have any questions
 
